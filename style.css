@@ -310,3 +310,71 @@ section p {
         margin-bottom: 10px;
     }
 }
+/* Hero Section Background Image */
+.hero-section {
+    position: relative;
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-bottom: 20px;
+}
+
+/* Hero Section Text Styling */
+.hero-section h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.hero-section span {
+    color: #ff6347; /* Highlighted color */
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section .btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    background-color: #ff4500;
+}
+
+/* Ensure the content is visible over the background */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better contrast */
+    z-index: 1;
+}
+
+/* Ensure text and profile picture are on top of overlay */
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
